@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Box } from "@mui/material";
 
 import Login from "./pages/Login";
 import Requests from "./pages/Requests";
