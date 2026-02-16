@@ -124,7 +124,7 @@ export default function RequestDetail() {
                     Назад
                 </Button>
                 <Typography variant="h4">
-                    Детали заявки #{req.id}
+                    Детали заявки от {req.full_name}
                 </Typography>
             </Stack>
 
