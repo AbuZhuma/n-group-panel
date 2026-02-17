@@ -116,7 +116,7 @@ export default function RequestDetail() {
             setRejectReason("");
         }
     };
-
+        
     return (
         <Box p={4}>
             <Stack direction="row" spacing={3} alignItems="center" mb={3}>
@@ -131,6 +131,7 @@ export default function RequestDetail() {
             <Paper sx={{ p: 3, mb: 3 }}>
                 <Typography><strong>ФИО:</strong> {req.full_name}</Typography>
                 <Typography><strong>Телефон:</strong> {req.whatsapp_phone}</Typography>
+                <Typography><strong>Почта:</strong> {req.email}</Typography>
 
                 <Typography>
                     <strong>Инвестор:</strong>{" "}

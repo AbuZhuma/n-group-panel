@@ -1,4 +1,3 @@
-// src/store/useRequestsStore.ts
 import { create } from "zustand";
 import { getAllRequest } from "../services/getAllRequests";
 
@@ -15,6 +14,7 @@ export type Request = {
   id: number;
   full_name: string;
   whatsapp_phone: string;
+  email: string;
   is_investor: boolean;
   objects: string[];
   contract_number: string;

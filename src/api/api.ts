@@ -1,7 +1,7 @@
 import axios from "axios";
 export const apiUrl = "https://gn.kassir.kg/api"
 export const api = axios.create({
-  baseURL: apiUrl   ,
+  baseURL: apiUrl,
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
