@@ -42,6 +42,7 @@ export default function RequestDetail() {
             if (!id) return;
 
             const res = await getRequestById(id);
+            
             if (res) {
                 setReq(res);
             }
@@ -129,6 +130,7 @@ export default function RequestDetail() {
             </Stack>
 
             <Paper sx={{ p: 3, mb: 3 }}>
+                <Typography><strong>Айди:</strong> {req.id}</Typography>
                 <Typography><strong>ФИО:</strong> {req.full_name}</Typography>
                 <Typography><strong>Телефон:</strong> {req.whatsapp_phone}</Typography>
                 <Typography><strong>Почта:</strong> {req.email}</Typography>

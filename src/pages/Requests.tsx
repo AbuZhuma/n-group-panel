@@ -35,13 +35,13 @@ export default function Requests() {
     return requests.filter((r) => {
       const searchValue = search.toLowerCase();
       return (
-        r.full_name.toLowerCase().includes(searchValue) ||
-        r.whatsapp_phone.toLowerCase().includes(searchValue)
+        r.full_name?.toLowerCase().includes(searchValue) ||
+        r.whatsapp_phone?.toLowerCase().includes(searchValue) ||
+        r.email?.toLowerCase().includes(searchValue)
       );
     });
   }, [requests, search]);
 
-  // 📂 Разделяем по статусам
   const grouped = {
     NEW: filteredRequests.filter((r) => r.status === "NEW"),
     APPROVED: filteredRequests.filter((r) => r.status === "APPROVED"),
@@ -56,6 +56,7 @@ export default function Requests() {
           <TableCell>Телефон</TableCell>
           <TableCell>Детей приходит</TableCell>
           <TableCell>Статус</TableCell>
+          <TableCell>Почта</TableCell>
           <TableCell>Действие</TableCell>
         </TableRow>
       </TableHead>
@@ -69,11 +70,12 @@ export default function Requests() {
           </TableRow>
         ) : (
           data.map((r) => (
-            <TableRow key={r.id}>
+            <TableRow key={r.id}>   
               <TableCell>{r.full_name}</TableCell>
               <TableCell>{r.whatsapp_phone}</TableCell>
               <TableCell>{r.children_coming}</TableCell>
               <TableCell>{STATUS_MAP[r.status]}</TableCell>
+              <TableCell>{r.email}</TableCell>
               <TableCell>
                 <Button
                   variant="contained"
